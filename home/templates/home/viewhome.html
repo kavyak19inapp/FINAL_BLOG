@@ -3,7 +3,11 @@
 
 
   {% for p in view %}
+<<<<<<< HEAD
   <h1><a href="{%url 'detail' p.id%}">{{ p.title }}</a></h1>
+=======
+  <h1>{{ p.title }}</h1>
+>>>>>>> 6c0dd6c914f92e653ee8e24941335be8686c999b
   <h2>{{ p.text }}</h2>
   <p>Posted by {{ p.user.get_full_name}} on {{ p.date}}</p>
   <p>{{p.date}}</p>

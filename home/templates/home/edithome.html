@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 {%extends 'base.html'%}
+=======
+{%extend 'base.html'%}
+>>>>>>> 6c0dd6c914f92e653ee8e24941335be8686c999b
 {% block body%}
 <h1>created post</h1>
 <div class="container">
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
+<<<<<<< HEAD
     <br><input type="submit" value="Submit" />
+=======
+    <a class="btn btn-default" href="{% url 'edit_post' %}">submit </a>
+>>>>>>> 6c0dd6c914f92e653ee8e24941335be8686c999b
   </form>
 </div>
 {% endblock %}
