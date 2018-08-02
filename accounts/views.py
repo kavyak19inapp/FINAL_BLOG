@@ -13,18 +13,15 @@ def register(request):
         return redirect('/account/login')
     else:
         form=UserCreationForm()
-
-    args={'form':form}
+        args={'form':form}
     return render(request,'accounts/reg_form.html',args)
 
 def profile(request):
     args={'user':request.user}
     return render(request, 'account/profile.html',args)
-<<<<<<< HEAD
+
 
 def create_profile(sender,**kwargs):
     if kwargs['created']:
         user_profile=UserProfile.objects.create(user=kwargs['instance'])
     post_save.connect(create_profile,sender=User)
-=======
->>>>>>> 6c0dd6c914f92e653ee8e24941335be8686c999b

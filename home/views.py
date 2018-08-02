@@ -1,6 +1,5 @@
 
 from django.views.generic import TemplateView
-<<<<<<< HEAD
 from django.shortcuts import render,redirect,reverse
 from home.forms import HomeForm
 from home.models import Post
@@ -11,11 +10,9 @@ from django.urls import reverse_lazy
 
 
 
-=======
 from django.shortcuts import render,redirect
 from home.forms import HomeForm
 from home.models import Post
->>>>>>> 6c0dd6c914f92e653ee8e24941335be8686c999b
 
 class HomeView(TemplateView):
     template_name='home/home.html'
@@ -43,7 +40,7 @@ class HomeView(TemplateView):
 def view_post(request):
     view = Post.objects.all()
     return render(request,'home/viewhome.html',{'view':view})
-<<<<<<< HEAD
+
 
 class EditPost(UpdateView):
     model = Post
@@ -61,5 +58,3 @@ class DeletePost(DeleteView):
     template_name = 'home/deletepost.html'
     def get_success_url(self, *args, **kwargs):
         return reverse("view_post")
-=======
->>>>>>> 6c0dd6c914f92e653ee8e24941335be8686c999b
