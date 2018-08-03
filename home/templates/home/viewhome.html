@@ -1,10 +1,25 @@
 {% extends 'base.html'%}
 {%block head%}
+<<<<<<< HEAD
 {% for p in view %}
 <h1><a href="{%url 'detail' p.id%}">{{ p.title }}</a></h1>
 <h2>{{ p.text }}</h2>
 <p>Posted by {{ p.user.get_full_name}} on {{ p.date}}</p>
 <p>{{p.date}}</p>
 {% endfor%}
+=======
+
+
+  {% for p in view %}
+
+  <h1><a href="{%url 'detail' p.id%}">{{ p.title }}</a></h1>
+
+  <h1>{{ p.title }}</h1>
+
+  <h2>{{ p.text }}</h2>
+  <p>Posted by {{ p.user.get_full_name}} on {{ p.date}}</p>
+  <p>{{p.date}}</p>
+  {% endfor%}
+>>>>>>> f29d42077afee9e754d715fe753796273cca2451
 </div>
 {% endblock %}

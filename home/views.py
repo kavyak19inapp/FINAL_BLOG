@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 from django.views.generic import TemplateView
 from django.shortcuts import render,redirect,reverse,get_object_or_404
 from home.forms import HomeForm,CommentForm
+=======
+
+from django.views.generic import TemplateView
+from django.shortcuts import render,redirect,reverse
+from home.forms import HomeForm
+>>>>>>> f29d42077afee9e754d715fe753796273cca2451
 from home.models import Post
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
@@ -9,6 +16,13 @@ from django.urls import reverse_lazy
 
 
 
+<<<<<<< HEAD
+=======
+from django.shortcuts import render,redirect
+from home.forms import HomeForm
+from home.models import Post
+
+>>>>>>> f29d42077afee9e754d715fe753796273cca2451
 class HomeView(TemplateView):
     template_name='home/home.html'
 
@@ -53,6 +67,7 @@ class DeletePost(DeleteView):
     template_name = 'home/deletepost.html'
     def get_success_url(self, *args, **kwargs):
         return reverse("view_post")
+<<<<<<< HEAD
 
 
 def comment_new(request, pk):
@@ -67,3 +82,5 @@ def comment_new(request, pk):
     else:
         form = CommentForm()
     return render(request, 'home/comments.html', {'form': form,'post':post})
+=======
+>>>>>>> f29d42077afee9e754d715fe753796273cca2451
