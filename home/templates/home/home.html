@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{%block head%}
+<div class="container">
+  <h1>BLOG</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+  <button class="btn btn-default" type="submit"><a  href="{% url 'view_post' %}"> submit </a></button>
+  </form>
+</div>
+{% endblock %}

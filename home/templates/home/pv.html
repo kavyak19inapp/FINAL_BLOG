@@ -1,0 +1,18 @@
+
+<html>
+  <head>
+    <title>pv</title>
+  </head>
+  <body><h1><a href="/home/{{post.id}}">{{ post.title }}</a>
+    <h2>{{ post.text }}</h2>
+    <p>Posted by {{ post.user.get_full_name}} on {{ post.date}}</p>
+  <div class="">
+      <h4><a class="submit" href={%url 'edit' post.id%}>EditPost</a></h4>
+      <h5><a href={%url 'delete' post.id%}>DeletePost</a></h5>
+      <h6><a href={%url 'comment' post.id%}>comment_new</h6>
+
+    </div>
+  </h2></h1>
+
+  </body>
+</html>
